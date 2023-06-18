@@ -1,14 +1,14 @@
 const App = () => <>
   <div className='grid place-content-center h-full bg-black text-white text-center'>
     {[...Array(3).keys()].map(size => size + 1).map(
-      size => [...Array(50).keys()].map(
+      size => [...Array(30).keys()].map(
         number => {
           const xOffset = Math.random() * 100,
                 yOffset = Math.random() * 100
           return <div
             className='absolute'
             style={{
-              animationDuration      : `${size * 10 + 30}s`,
+              animationDuration      : `${size * 30 + 30}s`,
               animationIterationCount: 'infinite',
               animationName          : 'rise',
               animationTimingFunction: 'linear'
@@ -35,12 +35,12 @@ const App = () => <>
         }
       )
     )}
-    <div className='p-16 border-t border-t-gray-300 rounded-2xl flex flex-col gap-8 backdrop-blur-sm'>
+    <div className='p-8 sm:p-16 border-t border-t-gray-300 rounded-2xl flex flex-col gap-4 sm:gap-8 backdrop-blur-sm'>
       <h1 className='text-4xl font-bold text-center'>hi world 👋</h1>
       <main>
         <p>i'm <a href='https://github.com/circles-png' className='underline decoration-2 underline-offset-2' target='_blank'>circles.png</a>!</p>
         <hr className='m-2 border-gray-500'/>
-        <div className='grid grid-cols-2 gap-8 divide-gray-500'>
+        <div className='grid sm:grid-cols-2 gap-4 sm:gap-8 divide-gray-500'>
           <div>
             <span className='font-bold'>likes:</span>
             <ul className='list-disc list-inside text-left'>
