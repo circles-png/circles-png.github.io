@@ -1,14 +1,14 @@
 const App = () => <>
-  <div className='grid place-content-center h-full bg-black text-white'>
+  <div className='grid place-content-center h-full bg-black text-white text-center'>
     {[...Array(3).keys()].map(size => size + 1).map(
-      size => [...Array(100).keys()].map(
+      size => [...Array(50).keys()].map(
         number => {
           const xOffset = Math.random() * 100,
                 yOffset = Math.random() * 100
           return <div
             className='absolute'
             style={{
-              animationDuration      : `${size + 10}s`,
+              animationDuration      : `${size * 10 + 30}s`,
               animationIterationCount: 'infinite',
               animationName          : 'rise',
               animationTimingFunction: 'linear'
@@ -35,10 +35,41 @@ const App = () => <>
         }
       )
     )}
-
-    <div>
-      <h1 className='text-4xl font-bold text-center'>hi world</h1>
-      <span className='text-sm'>carrd? what's that?</span>
+    <div className='p-16 border-t border-t-gray-300 rounded-2xl flex flex-col gap-8 backdrop-blur-sm'>
+      <h1 className='text-4xl font-bold text-center'>hi world 👋</h1>
+      <main>
+        <p>i'm <a href='https://github.com/circles-png' className='underline decoration-2 underline-offset-2' target='_blank'>circles.png</a>!</p>
+        <hr className='m-2 border-gray-500'/>
+        <div className='grid grid-cols-2 gap-8 divide-gray-500'>
+          <div>
+            <span className='font-bold'>likes:</span>
+            <ul className='list-disc list-inside text-left'>
+              <li>making things</li>
+              <li>music</li>
+              <li>monospace fonts</li>
+              <li>gaming</li>
+            </ul>
+          </div>
+          <div>
+            <span className='font-bold'>dislikes:</span>
+            <ul className='list-disc list-inside text-left'>
+              <li>not much</li>
+            </ul>
+          </div>
+        </div>
+        <hr className='m-2 border-gray-500' />
+        <h2 className='font-bold'>talk!</h2>
+        <div className='flex justify-center'>
+          <a
+            href='https://discordapp.com/users/262120465525506049'
+            className='decoration-[#5865F2] underline decoration-2 underline-offset-2'
+            target='_blank'
+          >
+            discord
+          </a>
+        </div>
+      </main>
+      <span className='text-sm text-gray-500 text-right'>carrd? what's that?</span>
     </div>
   </div>
 </>

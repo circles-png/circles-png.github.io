@@ -4,9 +4,11 @@ export default {
     './index.html',
     './src/**/*.tsx'
   ],
-  plugins: [],
-  theme  : {
+  plugins : [],
+  safelist: ['animate-rise'],
+  theme   : {
     extend: {
+      animation: { rise: 'rise 5s ease-in-out infinite' },
       keyframes: {
         rise: {
           '0%'  : { transform: 'translateY(0)' },
